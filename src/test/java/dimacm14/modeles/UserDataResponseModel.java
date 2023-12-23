@@ -1,12 +1,15 @@
 package dimacm14.modeles;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
 public class UserDataResponseModel {
     Integer id;
     String email;
-    String first_name;
-    String last_name;
+    @JsonProperty("first_name")
+    String firstName;
+    @JsonProperty("last_name")
+    String lastName;
     String avatar;
 }

@@ -24,7 +24,7 @@ public class UserSteps {
 
         step("Проверить данные списка пользователей", () -> {
             assertThat(userListResponse.getPage()).isEqualTo(2);
-            assertThat(userListResponse.getData()[0].getFirst_name()).isEqualTo("Michael");
+            assertThat(userListResponse.getData()[0].getFirstName()).isEqualTo("Michael");
             assertThat(userListResponse.getSupport().getUrl()).isEqualTo("https://reqres.in/#support-heading");
         });
     }
@@ -43,7 +43,7 @@ public class UserSteps {
 
         step("Проверить данные пользователя", () -> {
             assertThat(userResponse.getData().getId()).isEqualTo(2);
-            assertThat(userResponse.getData().getFirst_name()).isEqualTo("Janet");
+            assertThat(userResponse.getData().getFirstName()).isEqualTo("Janet");
             assertThat(userResponse.getSupport().getUrl()).isEqualTo("https://reqres.in/#support-heading");
         });
     }
@@ -74,7 +74,7 @@ public class UserSteps {
 
         step("Проверить данные списка пользователей", () -> {
             assertThat(userList.getPage()).isEqualTo(1);
-            assertThat(userList.getData()[0].getFirst_name()).isEqualTo("George");
+            assertThat(userList.getData()[0].getFirstName()).isEqualTo("George");
             assertThat(userList.getSupport().getUrl()).isEqualTo("https://reqres.in/#support-heading");
         });
     }
